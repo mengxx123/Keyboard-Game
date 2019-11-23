@@ -18,20 +18,21 @@ function keyUp(event) {
 function createText(event) {
     let userText = document.createTextNode(event.key);
     let node = document.createElement("p");
-    let space = document.createElement("h3")
-    console.log(event.key)
+    let space = document.createElement("h3");
+    let div = document.getElementById('text-display');
+    let children = div.childNodes.length - 1;
+    //This is for the spacebar click event
     if (event.keyCode === 32) {
         node.appendChild(space);
-        document.getElementById("text-display").appendChild(node);
-    }
-
-    if (event.keyCode === 8) {
+        div.appendChild(node);
+    //This is for the backspace click event
+    } else if (event.keyCode === 8) {
         console.log("the delete button was pressed")
-        }
-
-    node.appendChild(userText);
-    document.getElementById("text-display").appendChild(node);
-
+        div.removeChild(div.childNodes[children]);
+    } else {
+        node.appendChild(userText);
+        div.appendChild(node);
+    }
 
 }
 
