@@ -43,6 +43,10 @@ h1 {
     padding: 2rem;
 }
 
+h3 {
+    padding: 0 0.8rem;
+}
+
 .keys {
     display: flex;
     flex: 1;

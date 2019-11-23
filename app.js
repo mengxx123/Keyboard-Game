@@ -17,10 +17,16 @@ function keyUp(event) {
 
 function createText(event) {
     let userText = document.createTextNode(event.key);  
-    console.log(event.key)       
-    var node = document.createElement("p");                 
-    node.appendChild(userText);                              
-    document.getElementById("text-display").appendChild(node);
+    let node = document.createElement("p"); 
+    let space = document.createElement("h3") 
+    console.log(event.key) 
+    if (event.keyCode === 32) {
+        node.appendChild(space);                              
+        document.getElementById("text-display").appendChild(node);
+    }  else {
+        node.appendChild(userText);                              
+        document.getElementById("text-display").appendChild(node); 
+    }     
 
 }
 
