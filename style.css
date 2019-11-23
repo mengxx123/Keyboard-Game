@@ -54,17 +54,30 @@ h3 {
 }
 
 .key {
-    border: .4rem solid black;
+    border: .2rem solid black;
     border-radius: .5rem;
     margin: 1rem;
     font-size: 1.5rem;
-    padding: 1rem .5rem;
+    padding: 0.8rem .5rem;
     transition: all .07s ease;
     width: 10rem;
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 .5rem black;
+}
+
+#backspace {
+    font-size: 0.5rem;
+    text-align: center;
+    align-items: center;
+    width: 20rem;
+    display: flex;
+
+}
+
+#backspace span {
+    font-size: 2rem;
 }
 
 .spaceBar {
@@ -79,9 +92,14 @@ span {
 
 .keyboard {
     max-width: 1085px;
-    width: 75vw;
+    width: 80vw;
     margin: 2rem auto;
-    padding: 2rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.row {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .text-box {
@@ -109,13 +127,14 @@ span {
 }
 
 .row-one {
-    align-self: flex-end;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.row-three {
+.row-four {
     align-self: flex-start;
     max-width: 1000px;
-    width: 70vw;
+    width: 70%;
     margin: 0 auto;
 }
 

@@ -16,17 +16,22 @@ function keyUp(event) {
 }
 
 function createText(event) {
-    let userText = document.createTextNode(event.key);  
-    let node = document.createElement("p"); 
-    let space = document.createElement("h3") 
-    console.log(event.key) 
+    let userText = document.createTextNode(event.key);
+    let node = document.createElement("p");
+    let space = document.createElement("h3")
+    console.log(event.key)
     if (event.keyCode === 32) {
-        node.appendChild(space);                              
+        node.appendChild(space);
         document.getElementById("text-display").appendChild(node);
-    }  else {
-        node.appendChild(userText);                              
-        document.getElementById("text-display").appendChild(node); 
-    }     
+    }
+
+    if (event.keyCode === 8) {
+        console.log("the delete button was pressed")
+        }
+
+    node.appendChild(userText);
+    document.getElementById("text-display").appendChild(node);
+
 
 }
 
