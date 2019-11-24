@@ -29,7 +29,7 @@ body {
 .mask {
     margin: 0;
     padding: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     height: 100%;
 }
 
@@ -47,10 +47,20 @@ h3 {
     padding: 0 0.8rem;
 }
 
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #29abcc;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 2px;
+    padding: 2rem;
+}
+
 .keys {
     display: flex;
-    flex: 1;
     justify-content: center;
+    align-items: center;
 }
 
 .key {
@@ -73,7 +83,8 @@ h3 {
     align-items: center;
     width: 20rem;
     display: flex;
-
+    justify-content: center;
+    height: 6rem;
 }
 
 #backspace span {
@@ -106,7 +117,7 @@ span {
     font-size: 4rem;
     display: flex;
     justify-content: flex-start;
-    width: 85vw;
+    width: 75vw;
     padding: 1rem .5rem;
     overflow: auto;
     min-height: 8rem;
@@ -134,7 +145,7 @@ span {
 .row-four {
     align-self: flex-start;
     max-width: 1000px;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -154,4 +165,135 @@ kbd {
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #ffc600;
+}
+
+button {
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    height: 8rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.enter-key {
+    width: 20rem;
+}
+
+button span {
+    font-size: 1.8rem;
+}
+
+/* Modal Styling */
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window>div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-window header {
+    font-weight: bold;
+}
+
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+/* Demo Styles */
+
+
+.btn {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background: rgba(163, 160, 160, 0.4);
+    padding: 1em 1.5em;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: #29abcc;
+    
+}
+
+.startBtn {
+    padding: 1em 1.5em;
+    border-radius: 3px;
+    text-decoration: none;
+    background: rgba(163, 160, 160, 0.4);
+    margin: 2rem;
+
+}
+
+.startBtn:hover {
+    background: rgba(163, 160, 160, 0.7);
+}
+
+.btn i {
+    padding-right: 0.3em;
+}
+
+.close-modal-window {
+    display: none;
+}
+
+.writingBoard {
+    position: absolute;
+    top: 0rem;
+    margin: 0 auto;
+    border: .2rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 0.8rem .5rem;
+    transition: all .07s ease;
+    width: 100vw;
+    height: 10rem;
+    background: rgba(0, 0, 0, 1);
+    text-shadow: 0 0 .5rem black;
+    z-index: 10;
 }
